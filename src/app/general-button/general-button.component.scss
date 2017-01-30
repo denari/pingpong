@@ -1,0 +1,22 @@
+@import "src/sass/init";
+
+div {
+  &.toriaezu {
+    background-color: #fc0;
+  }
+  &.passenger {
+    background-color: #fc0;
+  }
+  color: white;
+  text-align: center;
+  font-weight: bolder;
+  padding: 40px;
+  margin: 12px 0;
+  font-size: 30px;
+  border-radius: 5px;
+  border-bottom: 7px solid #da0;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  &:hover {
+    opacity: 0.7;
+  }
+}

@@ -1,0 +1,5 @@
+export const urls = {
+  slack_get_names_url: 'https://slack.com/api/users.list?token=XXXXXXXXXX&pretty=1',
+  slack_post_url: 'https:/hooks.slack.com/services/XXXXXXXXX/XXXXXXXXX/XXXXXXXXXXXXXXXXXXXx',
+  names_get_url: 'YOUR APP URL'
+}

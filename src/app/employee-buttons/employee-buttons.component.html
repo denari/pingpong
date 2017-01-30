@@ -1,0 +1,11 @@
+<div class="list-group">
+  <div class="list-group-item" *ngFor="let employee of employees; let i = index">
+    <div class="row">
+      <div class="employee" (click)='sendPersonalMessage( employee.slack_id )'>
+        {{employee.name}}
+        <div class="slackid">@{{ employee.slack_id }}</div>
+        <img src="{{ employee.image_url }}" alt="{{employee.name}}">
+      </div>
+    </div>
+  </div>
+</div>
