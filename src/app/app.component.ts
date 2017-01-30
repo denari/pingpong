@@ -21,7 +21,6 @@ import 'rxjs/add/operator/toPromise';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
   providers: [MessageService, EmployeeService]
 })
 export class AppComponent {

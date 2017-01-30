@@ -2,10 +2,9 @@ import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { Employee } from './employee';
-import { urls } from './config';
+import { urls, columns } from './config';
 
-const NAME_GET_URL = urls.names_get_url
-const SLACK_GET_URL = urls.slack_get_names_url
+const SLACK_GET_URL = urls.slack_get_names_url;
 
 @Injectable()
 export class EmployeeService {
@@ -13,7 +12,8 @@ export class EmployeeService {
   constructor(private http: Http) {}
 
   getUser(): Observable<Employee[]> {
-    return this.http.get(NAME_GET_URL)
+    let access_token:string = location.hash.split('&')[0].split('=')[1];
+    return this.http.get(urls.names_get_url + access_token)
                     .map(this.extractNameData)
                     .catch(this.handleError);
   }
@@ -25,7 +25,14 @@ export class EmployeeService {
   }
 
   private extractNameData(res: Response) {
-    return res.json() || {};
+    console.log(res.json());
+    return res.json().values.map(el => {
+      return {
+        name: el[columns.names_column],
+        mail: el[columns.emails_column],
+        roman_name: el[columns.roman_names_column]
+      }
+    }) || {};
   }
 
   private extractIDData(res: Response) {
