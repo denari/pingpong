@@ -1,12 +1,12 @@
 @import "src/sass/init";
 
 .employee {
-  background: #555555;
-  padding: 15px;
+  border: 1px solid #eeeeee;
+  padding: 30px 15px;
   box-sizing: border-box;
   border-radius: 5px;
-  border-bottom: 5px solid #222222;
-  color: white;
+  background-color: white;
+  font-size: 15px;
 }
 
 .list-group {
@@ -17,11 +17,10 @@
 
 .list-group-item {
   display: block;
-  @include span-columns(3);
-  @include omega(4n);
+  @include span-columns(4);
+  @include omega(3n);
   margin-top: 20px;
   text-align: center;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
   &:hover {
     opacity: 0.7;
   }
@@ -31,10 +30,20 @@ img {
   display: block;
   height: 140px;
   width: 140px;
+  margin: 0 auto 20px;
+  border-radius: 1000px;
+  border: 1px solid #d4d4d4;
 }
 
 .slackid {
   font-size: 12px;
   color: #999999;
   margin-bottom: 10px;
+}
+
+.calling {
+  border-radius: 100px;
+  padding: 10px;
+  border: 1px solid $link;
+  color: $link;
 }
