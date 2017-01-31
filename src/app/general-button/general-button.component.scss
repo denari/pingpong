@@ -1,22 +1,32 @@
 @import "src/sass/init";
 
-div {
-  &.toriaezu {
-    background-color: #fc0;
-  }
-  &.passenger {
-    background-color: #fc0;
-  }
-  color: white;
+.toriaezu, .passenger {
+  @include outer-container;
+  color: $link;
   text-align: center;
-  font-weight: bolder;
   padding: 40px;
   margin: 12px 0;
-  font-size: 30px;
   border-radius: 5px;
-  border-bottom: 7px solid #da0;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  border: 1px solid #e6e6e6;
   &:hover {
     opacity: 0.7;
   }
+}
+
+.description {
+  @include span-columns(7);
+  font-size: 18px;
+  color: #999999;
+  text-align: left;
+}
+
+.link {
+  @include span-columns(5);
+  background-color: $link;
+  border-radius: 100px;
+  box-sizing: border-box;
+  padding: 10px;
+  color: white;
+  margin-top: 5px;
 }

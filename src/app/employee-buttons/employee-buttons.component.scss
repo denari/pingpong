@@ -1,7 +1,7 @@
 @import "src/sass/init";
 
 .employee {
-  border: 1px solid #eeeeee;
+  border: 1px solid #e6e6e6;
   padding: 30px 15px;
   box-sizing: border-box;
   border-radius: 5px;
@@ -45,5 +45,6 @@ img {
   border-radius: 100px;
   padding: 10px;
   border: 1px solid $link;
-  color: $link;
+  color: white;
+  background-color: $link;
 }
