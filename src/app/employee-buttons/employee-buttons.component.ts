@@ -40,7 +40,10 @@ export class EmployeeButtonsComponent implements OnInit {
           };
         }
       }
-      this.employees = res.users.map(employeeName => {
+      this.employees = res.users.filter(employeeName => {
+        return slackArray[employeeName.mail] !== undefined;
+      }).map(employeeName => {
+        console.log(slackArray[employeeName.mail])
         return new Employee(
           employeeName.mail,
           employeeName.name,
