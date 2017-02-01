@@ -19,6 +19,8 @@ export class MessageService {
              .catch(this.handleError)
              .subscribe(result => null);
 
+     alert('お呼び出ししておりますのでしばらくお待ち下さい。');
+
   }
 
   private extractData(res: Response) {
